@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Insight Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="input-card">
+            <h2>Setup Your Profile</h2>
+            <form id="userForm">
+                <input type="text" id="userName" placeholder="Enter Name" required>
+                <input type="number" id="userAge" placeholder="Enter Age" required>
+                <button type="submit">Save Profile</button>
+            </form>
+        </section>
+
+        <section id="displaySection" class="hidden">
+            <h1 id="greeting"></h1>
+            <p id="ageResult"></p>
+            <div id="contentAccess" class="status-badge"></div>
+            
+            <div class="quote-container">
+                <h3>Your Daily Motivation:</h3>
+                <div id="quoteRepeater"></div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
