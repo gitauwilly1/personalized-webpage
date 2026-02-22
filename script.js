@@ -10,6 +10,7 @@ function updateUI() {
     let age = localStorage.getItem('age');
 
     if (name && age) {
+        displaySection.classList.remove('hidden');
 
         document.getElementById('greeting').innerText = `Hello, ${name}!`;
 
