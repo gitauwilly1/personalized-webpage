@@ -8,7 +8,7 @@ A sleek, interactive web application that captures user data, performs real-time
 - **Glassmorphism UI**: A modern, frosted-glass interface built with pure CSS.
 - **Responsive Design**: Works perfectly on mobile and desktop.
 
-## 🛠️ Tech Stack
+##  Tech Stack
 - **HTML5** (Structure)
 - **CSS3** (Glassmorphism & Layout)
 - **JavaScript** (ES6+ Logic)
