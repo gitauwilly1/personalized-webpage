@@ -1,8 +1,6 @@
-// --- Elements ---
 const form = document.getElementById('userForm');
 const displaySection = document.getElementById('displaySection');
 
-// --- Functions ---
 
 /**
  * Calculates age in months
@@ -11,9 +9,7 @@ const displaySection = document.getElementById('displaySection');
  */
 const getAgeInMonths = (years) => years * 12;
 
-/**
- * Handles the display logic and localStorage retrieval
- */
+
 function updateUI() {
     const name = localStorage.getItem('name');
     const age = localStorage.getItem('age');
@@ -31,10 +27,10 @@ function updateUI() {
         // 3. Conditional Content (If/Else)
         const accessDiv = document.getElementById('contentAccess');
         if (age >= 18) {
-            accessDiv.innerText = "Premium Content Unlocked ✅";
+            accessDiv.innerText = "Premium Content Unlocked ";
             accessDiv.style.color = "green";
         } else {
-            accessDiv.innerText = "Restricted Mode Active 🔒";
+            accessDiv.innerText = "Restricted Mode Active ";
             accessDiv.style.color = "orange";
         }
 
@@ -60,5 +56,3 @@ form.addEventListener('submit', (e) => {
     updateUI();
 });
 
-// Run on page load to see if data already exists
-window.onload = updateUI;
