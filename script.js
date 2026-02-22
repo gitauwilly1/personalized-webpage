@@ -1,18 +1,13 @@
-const form = document.getElementById('userForm');
-const displaySection = document.getElementById('displaySection');
+let form = document.getElementById('userForm');
+let displaySection = document.getElementById('displaySection');
 
 
-/**
- * Calculates age in months
- * @param {number} years 
- * @returns {number}
- */
-const getAgeInMonths = (years) => years * 12;
+let getAgeInMonths = (years) => years * 12;
 
 
 function updateUI() {
-    const name = localStorage.getItem('name');
-    const age = localStorage.getItem('age');
+    let name = localStorage.getItem('name');
+    let age = localStorage.getItem('age');
 
     if (name && age) {
         displaySection.classList.remove('hidden');
@@ -21,11 +16,11 @@ function updateUI() {
         document.getElementById('greeting').innerText = `Hello, ${name}!`;
 
         // 2. Age in Months
-        const months = getAgeInMonths(parseInt(age));
+        let months = getAgeInMonths(parseInt(age));
         document.getElementById('ageResult').innerText = `You are ${months} months old.`;
 
         // 3. Conditional Content (If/Else)
-        const accessDiv = document.getElementById('contentAccess');
+        let accessDiv = document.getElementById('contentAccess');
         if (age >= 18) {
             accessDiv.innerText = "Premium Content Unlocked ";
             accessDiv.style.color = "green";
@@ -35,10 +30,10 @@ function updateUI() {
         }
 
         // 4. Quote Loop
-        const quoteBox = document.getElementById('quoteRepeater');
+        let quoteBox = document.getElementById('quoteRepeater');
         quoteBox.innerHTML = ''; // Clear previous loop
         for (let i = 0; i < 5; i++) {
-            const p = document.createElement('p');
+            let p = document.createElement('p');
             p.textContent = "Keep pushing forward, you're doing great!";
             quoteBox.appendChild(p);
         }
