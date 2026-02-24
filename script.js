@@ -47,3 +47,4 @@ form.addEventListener('submit', (e) => {
     updateUI();
 });
 
+window.onload = updateUI;
